@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+body{
+	background-image: url("../static/img/Transparent.png");
+	background-size: 100%;
+}
+form{
+	background-color: grey;
+	color:white;
+	margin: 70px 400px;
+	padding: 0;
+	font-size: 20;
+}
+</style>
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+</head>
+<body>
+<center>
+<img src="/static/img/c1.jpg" width=800/><br>
+<h5 align="right">
+<a href="/" class="btn btn-primary ml-2">LogOut</h5></a>
+<h1>WELCOME &nbsp
+{% for row in rows %}
+{{row["name"]}}
+{% endfor %}
+</h1>
+<form action="{{url_for('addbook')}}" method='POST'>
+<h3>BOOKING INFORMATION</h3>
+<div class="container">
+<hr>
+Complete  Name<br>
+<input type="text" name="nm"/><br> 
+Number of children<br>
+<input type="text" name="ch"/><br>
+Number of adults<br> 
+<input type="text" name="ad"/><br>
+Number of senior citizens<br>
+<input type="text" name="sen"/><br>
+
+Mode Of Payment<br>
+<input type="text" name="mp"/><br>
+Booking date<br>
+<input type="text" name="dy"/><br>
+Month<br>
+<input type="text" name="mn"/><br>
+Year<br>
+<input type="text" name="yr"/><br>
+
+Foodname<br>
+<select name="mysort">
+<option value= "none">None</option>
+<option value= "south Indian Package">South Indian Package</option>
+<option value= "North Indian Package">North Indian Package</option>
+</select><br>
+Quantity<br>
+<input type="text" name="qt"/><br>
+<input type="submit" name="submit"/><br>
+<hr>
+<small>Please do not leave any fields empty</small>
+</form>
+</center>
+</body>
+</html>

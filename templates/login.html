@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+body{
+	background-image: url("../static/img/sd1.jpg");
+	
+}
+form{
+	background-color: black;
+	margin: 50px 550px;
+	color: white;
+}
+</style>
+</head>
+<body>
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+<center><img src="/static/img/c1.jpg" width=800/><br>
+<h2><a href="/addres" class="btn btn-primary ml-2"> Resorts</a> &nbsp 
+<a href="/addgm" class="btn btn-primary ml-2"> Games</a> &nbsp  
+<a href="/addtime" class="btn btn-primary ml-2">Park Timings</a> &nbsp  
+  <a href="/addtic" class="btn btn-primary ml-2">Tickets</a> &nbsp  
+ <a href="/addoff" class="btn btn-primary ml-2"> Offers</a> &nbsp  
+  <a href="/addfd" class="btn btn-primary ml-2"> Food</a> &nbsp 
+  <a href="{{url_for('addcmp')}}" class="btn btn-primary ml-2"> Lost anything?</a> &nbsp 
+ <a href="{{url_for('addreg')}}" class="btn btn-primary ml-2"> Sign Up</a> &nbsp   
+ <a href="{{url_for('login')}}" class="btn btn-primary ml-2"> Login</a></h2>
+<center>
+<form action="{{url_for('userverify')}}" method='POST'>
+<div class="container">
+<br>
+<h3>User Login</h3>
+<br>
+User Name<br>
+<input type="text" name="an"/><br><br>
+Password<br>
+<input type="text" name="pws"/><br><br>
+
+<input type="submit" name="submit"/><br><br>
+</form>
+</center>
+<h5 align="middle">
+<a href="/admin" class="btn btn-primary ml-2">Login as admin</h5></a>
+</div>
+ <footer><br><p align="right"><b>CONTACT  US AT 9876541320</footer>
+</body>
+</html>

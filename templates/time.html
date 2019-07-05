@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="uff-8">
+<title>TIMINGS</title>
+
+<style>
+body {
+	background-image: url("../static/img/bb9.png");
+	border-image-width: 600;
+	padding-left:50px;
+	padding-right:50px;
+}
+h2{
+	background-color: skyblue;
+}
+</style>
+</head>
+<body>
+
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+<center><img src="/static/img/c1.jpg" width=800/><br></center>
+<center><h1><a href="/addres" class="btn btn-primary ml-2"> Resorts</a> &nbsp 
+<a href="/addgm" class="btn btn-primary ml-2"> Games</a> &nbsp  
+<a href="/addtime" class="btn btn-primary ml-2">Park Timings</a> &nbsp  
+  <a href="/addtic" class="btn btn-primary ml-2">Tickets</a> &nbsp  
+ <a href="/addoff" class="btn btn-primary ml-2"> Offers</a> &nbsp  
+  <a href="/addfd" class="btn btn-primary ml-2"> Food</a> &nbsp 
+  <a href="{{url_for('addcmp')}}" class="btn btn-primary ml-2"> Lost anything?</a> &nbsp 
+ <a href="{{url_for('addreg')}}" class="btn btn-primary ml-2"> Sign Up</a> &nbsp   
+ <a href="{{url_for('login')}}" class="btn btn-primary ml-2"> Login</a></h1>
+ <h2>TIMINGS</h2><br>
+<img src="/static/img/timings.jpg" width=400/></center>
+<b>
+
+<p>1.Normal season weekday: 11:00AM to 6:00PM</p>
+<p>2.Normal weekends/holidays: 11:00AM to 6:00PM</p>
+<p>3.Peak season: 11:00AM to 7:00PM</p>
+<p>4.Water park timings on normalseason weekdays:12:30PM to 5:00PM</p>
+<p>5.Water park timings on peak season and normal weekends/holidays:12:00PM to 6:00PM</p>
+</b>
+</body>
+</html>

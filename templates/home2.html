@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FUN FAIR</title>
+
+<style>
+h1{
+	background-color: pink;
+}
+h2{
+	background-color: grey;
+	color: white;
+}
+body {
+	background-image: url("../static/img/pic1.jpg");
+	border-image-width: 1000px;
+}
+</style>
+
+<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+</head>
+
+<div class="container">
+  <br>
+<center>
+<img src="/static/img/c1.jpg" width=800/><br>
+</center>
+<center><h2><a href="/addres" class="btn btn-primary ml-2"> Resorts</a> &nbsp 
+<a href="/addgm" class="btn btn-primary ml-2"> Games</a> &nbsp  
+<a href="/addtime" class="btn btn-primary ml-2">Park Timings</a> &nbsp  
+  <a href="/addtic" class="btn btn-primary ml-2">Tickets</a> &nbsp  
+ <a href="/addoff" class="btn btn-primary ml-2"> Offers</a> &nbsp  
+  <a href="/addfd" class="btn btn-primary ml-2"> Food</a> &nbsp
+  <a href="{{url_for('addcmp')}}" class="btn btn-primary ml-2"> Lost anything?</a> &nbsp 
+ <a href="{{url_for('addreg')}}" class="btn btn-primary ml-2"> Sign Up</a> &nbsp   
+ <a href="{{url_for('login')}}" class="btn btn-primary ml-2"> Login</a></h2></center>
+ <div id="slider">
+<p>
+<figure>
+<img src="/static/img/sd.jpg" width=100 height=600/><br>
+<img src="/static/img/3dcinema.jpg" width=100 height=600/><br>
+<img src="/static/img/park.jpg" width=100 height=600/><br>
+<img src="/static/img/dungeonride.jpg" width=100 height=600/><br>
+<img src="/static/img/twisters.jpg" width=100 height=600 /><br>
+
+
+</figure>
+</div>
+    </div>
+    <footer><br><p align="right"><b>CONTACT  US AT 9876541320</footer>
+ </body>
+</html>

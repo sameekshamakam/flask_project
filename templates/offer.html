@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>OFFERS</title>
+<style>
+h3{
+	background-color: skyblue;
+}
+body {
+	background-image: url("../static/img/bb8.png");
+	border-image-width: 600;
+	padding-left:50px;
+	padding-right:50px;
+}
+</style>
+</head>
+<body>
+
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+<center><img src="/static/img/c1.jpg" width=800/><br></center>
+<center><h2><a href="/addres" class="btn btn-primary ml-2"> Resorts</a> &nbsp 
+<a href="/addgm" class="btn btn-primary ml-2"> Games</a> &nbsp  
+<a href="/addtime" class="btn btn-primary ml-2">Park Timings</a> &nbsp  
+  <a href="/addtic" class="btn btn-primary ml-2">Tickets</a> &nbsp  
+ <a href="/addoff" class="btn btn-primary ml-2"> Offers</a> &nbsp  
+  <a href="/addfd" class="btn btn-primary ml-2"> Food</a> &nbsp 
+  <a href="{{url_for('addcmp')}}" class="btn btn-primary ml-2"> Lost anything?</a> &nbsp 
+ <a href="{{url_for('addreg')}}" class="btn btn-primary ml-2"> Sign Up</a> &nbsp   
+ <a href="{{url_for('login')}}" class="btn btn-primary ml-2"> Login</a></h2>
+ <h3><b>OFFERS<b></h3>
+<img src="/static/img/spoffer.jpg" width=500/></center>
+<B><p>1.College students:show your ID card and get flat 30% off on ticket prices.</p>
+<img src="/static/img/offer30.png" width=200/>
+<p>2.Flat 20% off on packages with tickets + car travel + meals only applied in offline.</p>
+<img src="/static/img/offer20.jpg" width=200/>
+<p>3.Get a children ticket for free on purchasing  two adult ticket in offline,Children age should be below 12 years.</p>
+<img src="/static/img/child.jpg" width=200/>
+<p>4.Buy 4 tickets and get one free.</p></B>
+<img src="/static/img/offersnew.png" width=200/>
+</body>
+</html>

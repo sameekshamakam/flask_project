@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {
+	background-image: url("../static/img/bb9.png");
+	border-image-width: 600;
+}
+</style>
+</head>
+<body>
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+<center><img src="/static/img/c1.jpg" width=800/><br></center>
+<h5 align="right">
+<a href="/" class="btn btn-primary ml-2">LogOut</h5></a><center>
+<h1> BILL </h1>
+<table>
+<thead>
+<td></td>
+<td></td>	
+</thead>
+
+{%for row in rows %}
+<tr>
+<td>Booking ID</td> <td> :{{row["bid"]}}</td></tr>
+<td>Name &nbsp </td>     <td>           :{{row["name"]}}</td></tr>
+<tr><td>NO of adults &nbsp  </td>    <td>    :{{row["adults"]}}</td></tr>
+<tr><td>NO of children  &nbsp  </td>    <td>     :{{row["child"]}}</td></tr>
+<tr><td>NO of senior citizens&nbsp</td>    <td>  :{{row["senior"]}}</td></tr>
+<tr><td>Date &nbsp                </td>    <td>  :{{row["myday"]}}/{{row["month"]}}/{{row["year"]}}</td></tr>
+<tr><td>Ticket price &nbsp </td>    <td>         :{{(row["adults"] * 1000+row["child"] * 700 +row["senior"] * 500)}}</td></tr>
+<tr><td>Ticket Tax    &nbsp </td>    <td>        :{{((row["adults"] * 1000 +row["child"] * 700 +row["senior"] * 500)*8)/100 }}</td></tr>
+<tr><td>Ticket Total Amount &nbsp</td>    <td>   :{{(row["adults"] * 1000 +row["child"] * 700 +row["senior"] * 500)+(((row["adults"] * 1000 +row["child"] * 700 +row["senior"] * 500)*8)/100)}}</td></tr>
+<tr><td>Mode of Payment   &nbsp  </td>    <td>   :{{row["mode"]}}</td></tr>
+<tr><td>Food Package Name &nbsp  </td>    <td>   :{{row["food"]}}</td></tr>
+<tr><td>Quantity     &nbsp   </td>    <td>       :{{row["quantity"]}}</td></tr>
+<tr><td>Food Price   &nbsp  </td>    <td>        :{{row["quantity"]*300}}</td></tr>
+<tr><td>Food Tax     &nbsp   </td>    <td>       :{{((row["quantity"]*300)*6)/100}}</td></tr>
+<tr><td>Food Total price &nbsp </td>    <td>     :{{row["quantity"]*300+(((row["quantity"]*300)*6)/100)}} </td></tr>
+<tr><td>Grand Total     &nbsp  </td>    <td>     :{{(row["adults"] * 1000 +row["child"] * 700 +row["senior"] * 500)+(((row["adults"] * 1000 +row["child"] * 700 +row["senior"] * 500)*8)/100)+(((row["quantity"]*300)*6)/100)+(row["quantity"]*300)}}</td></tr>
+{% endfor %}
+<br>
+</table>
+</center>
+ <footer><br><p align="right"><b>CONTACT  US AT 9876541320</footer>
+</body>
+</html>

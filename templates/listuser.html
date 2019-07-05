@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {
+	background-image: url("../static/img/bb9.png");
+	border-image-width: 600;
+	border-image-width: 600;
+	padding-left:50px;
+	padding-right:50px;
+}
+</style>
+</head>
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+<body>
+<center><img src="/static/img/c1.jpg" width=800/><br>
+<h5 align="right">
+<a href="/" class="btn btn-primary ml-2">Logout</h5></a>
+<table style="width:75%">
+<tr>
+<td><B>User Id</td>
+<td><B>User Name</td>
+<td><B>User Email</td>
+<td><B>User Phone Number</td>
+<!-- <td><B>Delete</td> -->
+</tr>
+{%for row in rows %}
+<tr>
+<td>{{row["id"]}}</td>
+<td>{{row["name"]}}</td>
+<td>{{row["email"]}}</td>
+<td>{{row["phone"]}}</td>
+<!-- <td><a href="{{ url_for('deleteuser', name=row.name) }} ">delete</td></a-->
+</tr>
+{% endfor %}
+</table></center>
+</body>
+</html>
+
+

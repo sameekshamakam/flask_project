@@ -1,0 +1,20 @@
+<html>
+<body>
+<link rel="stylesheet" href="{{url_for('static', filename='css/fm.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+<form action="{{url_for('adminverify')}}" method='POST'>
+<div class="container">
+<center><img src="/static/img/c1.jpg" width=800/><br>
+<h3>Admin Login</h3>
+<hr>
+Admin Name<br>
+<input type="text" name="an"/><br>
+Password<br>
+<input type="text" name="pws"/><br>
+
+<input type="submit" name="submit"/><br>
+<hr>
+</form>
+</center>
+</body>
+</html>

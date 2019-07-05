@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {
+	background-image: url("../static/img/bb9.png");
+	border-image-width: 600;
+}
+</style>
+</head>
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+<body>
+<h5 align="right">
+<br>
+<a href="/" class="btn btn-primary ml-2">LogOut</h5></a>
+<center><img src="/static/img/c1.jpg" width=800/><br>
+<h3>LOST AND FOUND OBJECT LIST</h3><br>
+<table style="width:75%">
+<tr>
+<td>Object Id</td>
+<td>Object </td>
+<td>Company/Type</td>
+<td>Colour</td>
+<td>Date</td>
+</tr>
+{%for row in rows %}
+<tr>
+<td>{{row["lid"]}}</td>
+<td>{{row["object"]}}</td>
+<td>{{row["type"]}}</td>
+<td>{{row["color"]}}</td>
+<td>{{row["date1"]}}</td>
+</tr>
+{% endfor %}
+</table></center>
+</body>
+</html>
+
+

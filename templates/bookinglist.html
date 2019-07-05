@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {
+	background-image: url("../static/img/bb6.png");
+	border-image-width: 600;
+	border-image-width: 600;
+	padding-left:50px;
+	padding-right:50px;
+}
+</style>
+</head>
+<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+<body>
+
+<center>
+<img src="/static/img/c1.jpg" width=800/><br></center>
+<h5 align="right">
+<a  href="/" class="btn btn-primary ml-2">Logout</a></h5>
+<center><h1>BOOKING LIST</h1>
+<table border=1>
+<thead>
+<td>Booking ID</td>
+<td>Name</td>
+<td>NO of adults </td>
+<td>NO of children </td>
+<td>NO of senior citizens </td>
+<td>Date</td>
+<td>Booking Price</td>
+<td>Booking Tax</td>
+<td>Booking Total amount</td>
+<td>Mode of payment</td>
+<td>Food name</td>
+<td>Quantity</td>
+<td>Food Price</td>
+<td>Food Tax</td>
+<td>Food Total Price</td>
+<td>Total price</td>
+<td>Delete</td>
+</thead>
+{%for row in rows %}
+<tr>
+<td>{{row["bid"]}}</td>
+<td>{{row["name"]}}</td>
+<td>{{row["adults"]}}</td>
+<td>{{row["child"]}}</td>
+<td>{{row["senior"]}}</td>
+<td>{{row["myday"]}}/{{row["month"]}}/{{row["year"]}}</td>
+<td>{{(row["adults"] * 1000+row["child"] * 700 +row["senior"] * 500)}}</td>
+<td>{{((row["adults"] * 1000 +row["child"] * 700 +row["senior"] * 500)*8)/100 }}</td>
+<td>{{(row["adults"] * 1000 +row["child"] * 700 +row["senior"] * 500)+(((row["adults"] * 1000 +row["child"] * 700 +row["senior"] * 500)*8)/100)}}</td>
+<td>{{row["mode"]}}</td>
+<td>{{row["food"]}}</td>
+<td>{{row["quantity"]}}</td>
+<td>{{row["quantity"]*300}}</td>
+<td>{{((row["quantity"]*300)*6)/100}}</td>
+<td>{{(row["quantity"]*300)+(((row["quantity"]*300)*6)/100)}}</td>
+<td>{{(row["adults"] * 1000 +row["child"] * 700 +row["senior"] * 500)+(((row["adults"] * 1000 +row["child"] * 700 +row["senior"] * 500)*8)/100)+(((row["quantity"]*300)*6)/100)+(row["quantity"]*300)}}</td>
+<td><a href="{{ url_for('deletebook', name=row.name) }}">delete</td></a>
+</tr>
+{% endfor %}
+</table>
+</center>
+
+</body>
+</html>
